@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" sizes="16x16 32x32 48x48">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Cadastrar Novo Ponto</title>
+</head>
+<body>
+    <h1>Cadastrar Novo Ponto</h1>
+    <form action="/novo-ponto" method="POST">
+        <label for="nome">Nome do Caminho:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+        <label for="pontos">Pontos:</label>
+        <textarea id="pontos" name="pontos" rows="4" required></textarea>
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>

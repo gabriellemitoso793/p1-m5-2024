@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" sizes="16x16 32x32 48x48">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Listar Caminhos</title>
+</head>
+<body>
+    <h1>Listar Caminhos</h1>
+    <ul>
+        {% for caminho in caminhos %}
+            <li>ID: {{ caminho.id }}, Nome: {{ caminho.nome }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
